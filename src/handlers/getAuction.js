@@ -9,7 +9,7 @@ export async function getAuctionById(id){
     try {
 
         const result = await dynamoDBClient.get({
-            TableName: process.env.AUCTION_TABLE_NAME,
+            TableName: process.env.AUCTIONS_TABLE_NAME,
             Key: { id }
         }).promise()
         auction = result.Item
